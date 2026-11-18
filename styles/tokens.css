@@ -1,0 +1,109 @@
+/* ============================================================
+   Дентал Про — токены
+   Одна база: графит с зелёным подтоном + мятный акцент.
+   Всё остальное в проекте строится только на этих значениях.
+   ============================================================ */
+
+/* ---------- Шрифты (self-host, только cyrillic + latin) ---------- */
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/onest-cyr.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/onest-lat.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2212;
+}
+@font-face {
+  font-family: "Prata";
+  src: url("../fonts/prata-cyr.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Prata";
+  src: url("../fonts/prata-lat.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122;
+}
+
+:root {
+  /* ---------- Цвет ---------- */
+  --c-bg: #070a09;
+  --c-bg-soft: #0c110f;
+  --c-surface: #121815;
+  --c-surface-hi: #18201c;
+  --c-line: rgba(233, 245, 239, 0.1);
+  --c-line-strong: rgba(233, 245, 239, 0.2);
+  --c-text: #e9f2ed;
+  --c-text-2: #a9b6b0;
+  --c-text-3: #8d9a95;
+  --c-accent: #8ce3c4;
+  --c-accent-dim: #57b398;
+  --c-on-accent: #04120e;
+  --c-danger: #ff9d8a;
+
+  /* ---------- Типографика ---------- */
+  --f-display: "Prata", "Times New Roman", Georgia, serif;
+  --f-text: "Onest", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --t-display: clamp(2.5rem, 1.2rem + 5.4vw, 5.25rem);
+  --t-h2: clamp(1.875rem, 1.1rem + 2.6vw, 3rem);
+  --t-h3: clamp(1.125rem, 0.95rem + 0.5vw, 1.375rem);
+  --t-lead: clamp(1.0625rem, 0.95rem + 0.4vw, 1.25rem);
+  --t-body: clamp(0.9375rem, 0.9rem + 0.15vw, 1.0625rem);
+  --t-small: 0.875rem;
+  --t-micro: 0.75rem;
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.22;
+  --lh-body: 1.62;
+
+  --ls-display: -0.012em;
+  --ls-tight: -0.01em;
+  --ls-label: 0.14em;
+
+  /* ---------- Отступы (8pt) ---------- */
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --s-5: 3rem;
+  --s-6: 4rem;
+  --s-7: 6rem;
+  --s-8: 8rem;
+
+  --pad-x: clamp(1.25rem, 4vw, 4rem);
+  --section-y: clamp(4.5rem, 2rem + 9vw, 8.5rem);
+  --maxw: 78rem;
+  --measure: 34ch;
+
+  /* ---------- Радиусы ---------- */
+  --r-1: 4px;
+  --r-2: 10px;
+  --r-pill: 999px;
+
+  /* ---------- Тени / свечения ---------- */
+  --glow: 0 0 0 1px rgba(140, 227, 196, 0.18), 0 24px 80px -40px rgba(140, 227, 196, 0.45);
+
+  /* ---------- Движение ---------- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-1: 220ms;
+  --dur-2: 480ms;
+  --dur-3: 720ms;
+
+  /* ---------- Z ---------- */
+  --z-nav: 50;
+  --z-float: 60;
+}
